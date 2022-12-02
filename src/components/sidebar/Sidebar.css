@@ -11,6 +11,10 @@
     padding: 20px;
     color:#555
 }
+.sidebarLink{
+    text-decoration: none;
+    color: inherit;
+}
 .sidebarMenu{
     margin-bottom: 10px;
 }
@@ -28,7 +32,8 @@
     display: flex;
     border-radius: 10px;
 }
-.sidebarListItem.active,.sidebarListItem.hover{
+.sidebarListItem.active,
+.sidebarListItem:hover{
     background-color: rgb(230, 230, 255);
 }
 .sidebarIcon{
