@@ -16,7 +16,6 @@ const AppLayout = ({ admin }) =>
   admin ? (
     <>
     <Topbar/>
-      
       <div className="container">
         <Sidebar />
         <Outlet />
@@ -25,11 +24,15 @@ const AppLayout = ({ admin }) =>
   ) : null;
 function App() {
   const admin = JSON.parse(JSON.parse(localStorage.getItem("persist:root"))?.user || "{}")?.currentUser?.isAdmin ;
+  
   return (
     <BrowserRouter>
       <div className="container2">
         <Routes>
-          <Route path="/login" element={<Login />} />
+          
+            <Route exact path="/login" element={<Login />} />
+          
+          
           {admin && (
               <Route element={<AppLayout admin={admin} />}>
               <Route index element={<Home />} />

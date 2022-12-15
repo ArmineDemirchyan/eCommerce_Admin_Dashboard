@@ -1,8 +1,6 @@
 .productList{
     flex: 4;
-}
-.productList{
-    flex: 4;
+    width: 100%;
 }
 
 .productListItem{
